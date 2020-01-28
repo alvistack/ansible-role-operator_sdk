@@ -96,7 +96,7 @@
     operator-sdk completion bash > /etc/bash_completion.d/operator-sdk
   args:
     executable: "/bin/bash"
-    creates: "/etc/bash_completion.d/molecule"
+    creates: "/etc/bash_completion.d/operator-sdk"
   register: result
   changed_when: result is not succeeded
   tags: operator_sdk
