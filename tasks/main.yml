@@ -56,6 +56,7 @@
     mode: "{{ item.mode | default('0755') }}"
     state: "{{ item.state | default('directory') }}"
   loop:
+    - { dest: "/etc/bash_completion.d" }
     - { dest: "/usr/local/bin" }
     - { dest: "{{ operator_sdk_download.dest | dirname }}" }
   tags: operator_sdk
@@ -87,6 +88,19 @@
   when: get_url_result is changed
   tags: operator_sdk
 
+- name: install bash completion
+  environment:
+    PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+  shell: |
+    set -o pipefail
+    operator-sdk completion bash > /etc/bash_completion.d/operator-sdk
+  args:
+    executable: "/bin/bash"
+    creates: "/etc/bash_completion.d/molecule"
+  register: result
+  changed_when: result is not succeeded
+  tags: operator_sdk
+
 - name: prepare files
   file:
     dest: "{{ item.dest }}"
@@ -95,5 +109,6 @@
     mode: "{{ item.mode | default('0644') }}"
     state: "{{ item.state | default('file') }}"
   loop:
+    - { dest: "/etc/bash_completion.d/operator-sdk" }
     - { dest: "/usr/local/bin/operator-sdk", mode: "0755" }
   tags: operator_sdk
