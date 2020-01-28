@@ -4,6 +4,8 @@
 
 ### Major Changes
 
+  - Install bash completion
+
 ## 4.1.0 - 2020-01-28
 
   - Ininitial release for Ansible 2.9 or higher
