@@ -15,6 +15,10 @@
 # limitations under the License.
 
 _operator_sdk_download:
+  v0.15.2:
+    url: "https://github.com/operator-framework/operator-sdk/releases/download/v0.15.2/operator-sdk-v0.15.2-x86_64-linux-gnu"
+    dest: "/var/cache/ansible/operator-sdk-v0.15.2-x86_64-linux-gnu"
+    checksum: "sha1:e0db05f3b6385673b0ec7218d05d0e1ccaad0107"
   v0.15.1:
     url: "https://github.com/operator-framework/operator-sdk/releases/download/v0.15.1/operator-sdk-v0.15.1-x86_64-linux-gnu"
     dest: "/var/cache/ansible/operator-sdk-v0.15.1-x86_64-linux-gnu"
