@@ -1,8 +1,8 @@
 # Ansible Role for Operator SDK
 
-[![Travis](https://img.shields.io/travis/alvistack/ansible-role-operator-sdk.svg)](https://travis-ci.org/alvistack/ansible-role-operator-sdk)
-[![GitHub release](https://img.shields.io/github/release/alvistack/ansible-role-operator-sdk.svg)](https://github.com/alvistack/ansible-role-operator-sdk)
-[![GitHub license](https://img.shields.io/github/license/alvistack/ansible-role-operator-sdk.svg)](https://github.com/alvistack/ansible-role-operator-sdk/blob/master/LICENSE)
+[![Travis](https://img.shields.io/travis/alvistack/ansible-role-operator_sdk.svg)](https://travis-ci.org/alvistack/ansible-role-operator_sdk)
+[![GitHub release](https://img.shields.io/github/release/alvistack/ansible-role-operator_sdk.svg)](https://github.com/alvistack/ansible-role-operator_sdk)
+[![GitHub license](https://img.shields.io/github/license/alvistack/ansible-role-operator_sdk.svg)](https://github.com/alvistack/ansible-role-operator_sdk/blob/master/LICENSE)
 [![Ansible Role](https://img.shields.io/badge/galaxy-alvistack.operator_sdk-blue.svg)](https://galaxy.ansible.com/alvistack/operator_sdk)
 
 Ansible Role for Operator SDK Installation.
