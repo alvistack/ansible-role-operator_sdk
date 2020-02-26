@@ -79,7 +79,7 @@
   shell: |
     set -o pipefail
     cd /usr/local/bin
-    TMP_DIR="`mktemp -d`" \
+    TMP_DIR="$(mktemp -d)" \
       && cp {{ operator_sdk_download.dest }} $TMP_DIR/operator-sdk \
       && chown root:root $TMP_DIR/operator-sdk \
       && chmod 0755 $TMP_DIR/operator-sdk \
