@@ -17,12 +17,27 @@
 - hosts: all
   remote_user: root
   become: true
-  roles:
-    - role: bootstrap
-    - role: python
-    - role: git
-    - role: locales
-    - role: docker
-    - role: kubectl
-    - role: ansible
-    - role: operator_sdk
+  tasks:
+    - include_role:
+        name: bootstrap
+
+    - include_role:
+        name: python
+
+    - include_role:
+        name: git
+
+    - include_role:
+        name: locales
+
+    - include_role:
+        name: docker
+
+    - include_role:
+        name: kubectl
+
+    - include_role:
+        name: ansible
+
+    - include_role:
+        name: operator_sdk
