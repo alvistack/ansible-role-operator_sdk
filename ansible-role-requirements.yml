@@ -26,18 +26,26 @@
   src: https://github.com/alvistack/ansible-role-git
   version: develop
 
-- name: locales
-  src: https://github.com/alvistack/ansible-role-locales
+- name: ansible
+  src: https://github.com/alvistack/ansible-role-ansible
   version: develop
 
 - name: docker
   src: https://github.com/alvistack/ansible-role-docker
   version: develop
 
+- name: cni_plugins
+  src: https://github.com/alvistack/ansible-role-cni_plugins
+  version: develop
+
+- name: cri_tools
+  src: https://github.com/alvistack/ansible-role-cri_tools
+  version: develop
+
 - name: kubectl
   src: https://github.com/alvistack/ansible-role-kubectl
   version: develop
 
-- name: ansible
-  src: https://github.com/alvistack/ansible-role-ansible
+- name: minikube
+  src: https://github.com/alvistack/ansible-role-minikube
   version: develop
