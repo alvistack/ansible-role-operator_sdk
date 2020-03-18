@@ -59,12 +59,12 @@
       register: result
       changed_when: result is not succeeded
 
-    - name: install olm
+    - name: operator-sdk install olm
       environment:
         PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
       shell: |
         set -o pipefail
-        operator-sdk olm install
+        operator-sdk status || operator-sdk olm install
       args:
         executable: "/bin/bash"
       register: result
