@@ -64,7 +64,7 @@
         PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
       shell: |
         set -o pipefail
-        operator-sdk status || operator-sdk olm install
+        operator-sdk olm status || operator-sdk olm install
       args:
         executable: "/bin/bash"
       register: result
