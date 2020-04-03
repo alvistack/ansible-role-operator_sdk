@@ -19,53 +19,7 @@
   become: true
   tasks:
     - include_role:
-        name: bootstrap
-
-    - include_role:
         name: python
 
     - include_role:
-        name: git
-
-    - include_role:
-        name: ansible
-
-    - include_role:
-        name: docker
-
-    - include_role:
-        name: cni_plugins
-
-    - include_role:
-        name: cri_tools
-
-    - include_role:
-        name: kubectl
-
-    - include_role:
-        name: minikube
-
-    - include_role:
         name: operator_sdk
-
-    - name: install weave
-      environment:
-        PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-      shell: |
-        set -o pipefail
-        kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
-      args:
-        executable: "/bin/bash"
-      register: result
-      changed_when: result is not succeeded
-
-    - name: operator-sdk install olm
-      environment:
-        PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-      shell: |
-        set -o pipefail
-        operator-sdk olm status || operator-sdk olm install
-      args:
-        executable: "/bin/bash"
-      register: result
-      changed_when: result is not succeeded
