@@ -15,15 +15,15 @@
 # limitations under the License.
 
 _operator_sdk_download:
+  v0.18.0:
+    url: "https://github.com/operator-framework/operator-sdk/releases/download/v0.18.0/operator-sdk-v0.18.0-x86_64-linux-gnu"
+    dest: "{{ ansible_user_dir }}/.ansible/tmp/operator-sdk-v0.18.0-x86_64-linux-gnu"
+    checksum: "sha1:3dd8f98632873bc950297e38f544a18e32eea4c2"
   v0.17.1:
     url: "https://github.com/operator-framework/operator-sdk/releases/download/v0.17.1/operator-sdk-v0.17.1-x86_64-linux-gnu"
     dest: "{{ ansible_user_dir }}/.ansible/tmp/operator-sdk-v0.17.1-x86_64-linux-gnu"
-    checksum: "sha1:c365e145fa6e335ceed36e4644b994af9fa44c0d"
+    checksum: "sha1:f5a8bceb768fed3d2bb92c383cce5465c30d1e12"
   v0.17.0:
     url: "https://github.com/operator-framework/operator-sdk/releases/download/v0.17.0/operator-sdk-v0.17.0-x86_64-linux-gnu"
     dest: "{{ ansible_user_dir }}/.ansible/tmp/operator-sdk-v0.17.0-x86_64-linux-gnu"
     checksum: "sha1:65cf739c4ea5f5426ceb0e383f144193e484cd42"
-  v0.16.0:
-    url: "https://github.com/operator-framework/operator-sdk/releases/download/v0.16.0/operator-sdk-v0.16.0-x86_64-linux-gnu"
-    dest: "{{ ansible_user_dir }}/.ansible/tmp/operator-sdk-v0.16.0-x86_64-linux-gnu"
-    checksum: "sha1:4fc1a8f9f250c4a9999a3b795d149de8610bd046"
