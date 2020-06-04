@@ -98,7 +98,8 @@
     operator-sdk completion bash > /etc/bash_completion.d/operator-sdk
   args:
     executable: "/bin/bash"
-  when: get_url_result is changed
+  changed_when: false
+  ignore_errors: true
   tags: operator_sdk
 
 - name: prepare files
