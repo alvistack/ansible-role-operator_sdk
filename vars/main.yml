@@ -27,6 +27,10 @@ _operator_sdk_download:
     url: "https://github.com/operator-framework/operator-sdk/releases/download/v0.18.0/operator-sdk-v0.18.0-x86_64-linux-gnu"
     dest: "{{ ansible_user_dir }}/.ansible/tmp/operator-sdk-v0.18.0-x86_64-linux-gnu"
     checksum: "sha1:3dd8f98632873bc950297e38f544a18e32eea4c2"
+  v0.17.2:
+    url: "https://github.com/operator-framework/operator-sdk/releases/download/v0.17.2/operator-sdk-v0.17.2-x86_64-linux-gnu"
+    dest: "{{ ansible_user_dir }}/.ansible/tmp/operator-sdk-v0.17.2-x86_64-linux-gnu"
+    checksum: "sha1:4025d73e3ede5f14d45754235b473ee1333d0a2d"
   v0.17.1:
     url: "https://github.com/operator-framework/operator-sdk/releases/download/v0.17.1/operator-sdk-v0.17.1-x86_64-linux-gnu"
     dest: "{{ ansible_user_dir }}/.ansible/tmp/operator-sdk-v0.17.1-x86_64-linux-gnu"
