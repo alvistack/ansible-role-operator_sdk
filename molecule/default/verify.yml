@@ -24,3 +24,17 @@
       command: operator-sdk version
       register: result
       changed_when: result is not succeeded
+
+    - name: ansible-operator version
+      environment:
+        PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+      command: ansible-operator version
+      register: result
+      changed_when: result is not succeeded
+
+    - name: helm-operator version
+      environment:
+        PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+      command: helm-operator version
+      register: result
+      changed_when: result is not succeeded

@@ -59,6 +59,8 @@
     - { dest: "/etc/bash_completion.d" }
     - { dest: "/usr/local/bin" }
     - { dest: "{{ operator_sdk_download.dest | dirname }}" }
+    - { dest: "{{ ansible_operator_download.dest | dirname }}" }
+    - { dest: "{{ helm_operator_download.dest | dirname }}" }
   tags: operator_sdk
 
 - name: download archive
@@ -71,6 +73,8 @@
     timeout: 300
   loop:
     - "{{ operator_sdk_download }}"
+    - "{{ ansible_operator_download }}"
+    - "{{ helm_operator_download }}"
   register: get_url_result
   until: get_url_result is succeeded
   tags: operator_sdk
@@ -81,9 +85,11 @@
     cd /usr/local/bin
     TMP_DIR="$(mktemp -d)" \
       && cp {{ operator_sdk_download.dest }} $TMP_DIR/operator-sdk \
-      && chown root:root $TMP_DIR/operator-sdk \
-      && chmod 0755 $TMP_DIR/operator-sdk \
-      && mv $TMP_DIR/operator-sdk . \
+      && cp {{ ansible_operator_download.dest }} $TMP_DIR/ansible-operator \
+      && cp {{ helm_operator_download.dest }} $TMP_DIR/helm-operator \
+      && chown root:root $TMP_DIR/* \
+      && chmod 0755 $TMP_DIR/* \
+      && mv $TMP_DIR/* . \
       && rm -rf $TMP_DIR
   args:
     executable: "/bin/bash"
@@ -111,5 +117,7 @@
     state: "{{ item.state | default('file') }}"
   loop:
     - { dest: "/etc/bash_completion.d/operator-sdk" }
+    - { dest: "/usr/local/bin/ansible-operator", mode: "0755" }
+    - { dest: "/usr/local/bin/helm-operator", mode: "0755" }
     - { dest: "/usr/local/bin/operator-sdk", mode: "0755" }
   tags: operator_sdk
