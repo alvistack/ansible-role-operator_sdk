@@ -6,6 +6,7 @@
 
   - Support openSUSE Leap 15.2
   - Remove Ubuntu 19.10 support
+  - Support Operator SDK \>= 1.0.0
 
 ## 4.4.0 - 2020-06-04
 
