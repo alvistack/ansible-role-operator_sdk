@@ -15,18 +15,30 @@
 # limitations under the License.
 
 _operator_sdk_download:
+  v1.0.1:
+    url: "https://github.com/operator-framework/operator-sdk/releases/download/v1.0.1/operator-sdk-v1.0.1-x86_64-linux-gnu"
+    dest: "{{ ansible_user_dir }}/.ansible/tmp/operator-sdk-v1.0.1-x86_64-linux-gnu"
+    checksum: "sha1:f6c993203d438551b7bd3654a35e106a348ed899"
   v1.0.0:
     url: "https://github.com/operator-framework/operator-sdk/releases/download/v1.0.0/operator-sdk-v1.0.0-x86_64-linux-gnu"
     dest: "{{ ansible_user_dir }}/.ansible/tmp/operator-sdk-v1.0.0-x86_64-linux-gnu"
     checksum: "sha1:142b249b0bf27b6a3c460e82ebaf3aab9d4be188"
 
 _ansible_operator_download:
+  v1.0.1:
+    url: "https://github.com/operator-framework/operator-sdk/releases/download/v1.0.1/ansible-operator-v1.0.1-x86_64-linux-gnu"
+    dest: "{{ ansible_user_dir }}/.ansible/tmp/ansible-operator-v1.0.1-x86_64-linux-gnu"
+    checksum: "sha1:4d7e2b2a9b96e43efbaea3ab92414096b64b5875"
   v1.0.0:
     url: "https://github.com/operator-framework/operator-sdk/releases/download/v1.0.0/ansible-operator-v1.0.0-x86_64-linux-gnu"
     dest: "{{ ansible_user_dir }}/.ansible/tmp/ansible-operator-v1.0.0-x86_64-linux-gnu"
     checksum: "sha1:666aac4c29e9141954cc04651917bb73c5ca06f1"
 
 _helm_operator_download:
+  v1.0.1:
+    url: "https://github.com/operator-framework/operator-sdk/releases/download/v1.0.1/helm-operator-v1.0.1-x86_64-linux-gnu"
+    dest: "{{ ansible_user_dir }}/.ansible/tmp/helm-operator-v1.0.1-x86_64-linux-gnu"
+    checksum: "sha1:0471880709ae641a7b51f0e72e78ba218eeaa486"
   v1.0.0:
     url: "https://github.com/operator-framework/operator-sdk/releases/download/v1.0.0/helm-operator-v1.0.0-x86_64-linux-gnu"
     dest: "{{ ansible_user_dir }}/.ansible/tmp/helm-operator-v1.0.0-x86_64-linux-gnu"
