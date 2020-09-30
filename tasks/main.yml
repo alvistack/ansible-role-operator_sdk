@@ -16,7 +16,6 @@
 
 - name: include default variables
   include_vars: "../vars/main.yml"
-  tags: operator_sdk
 
 - name: include release specific variables
   include_vars: "{{ lookup('first_found', _params) }}"
@@ -31,7 +30,6 @@
       paths:
         - "../vars"
   ignore_errors: true
-  tags: operator_sdk
 
 - name: include release specific tasks
   include_tasks: "{{ lookup('first_found', _params) }}"
@@ -46,7 +44,6 @@
       paths:
         - "."
   ignore_errors: true
-  tags: operator_sdk
 
 - name: prepare directories
   file:
@@ -61,7 +58,6 @@
     - { dest: "{{ operator_sdk_download.dest | dirname }}" }
     - { dest: "{{ ansible_operator_download.dest | dirname }}" }
     - { dest: "{{ helm_operator_download.dest | dirname }}" }
-  tags: operator_sdk
 
 - name: download archive
   vars:
@@ -78,7 +74,6 @@
     - "{{ helm_operator_download }}"
   register: get_url_result
   until: get_url_result is succeeded
-  tags: operator_sdk
 
 - name: unarchive package
   shell: |
@@ -95,7 +90,6 @@
   args:
     executable: "/bin/bash"
   when: get_url_result is changed
-  tags: operator_sdk
 
 - name: install bash completion
   environment:
@@ -107,7 +101,6 @@
     executable: "/bin/bash"
   changed_when: false
   ignore_errors: true
-  tags: operator_sdk
 
 - name: prepare files
   file:
@@ -121,4 +114,3 @@
     - { dest: "/usr/local/bin/ansible-operator", mode: "0755" }
     - { dest: "/usr/local/bin/helm-operator", mode: "0755" }
     - { dest: "/usr/local/bin/operator-sdk", mode: "0755" }
-  tags: operator_sdk
