@@ -14,14 +14,5 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Operator SDK version.
-operator_sdk_version: "v1.2.0"
-
-# Operator SDK download details.
-operator_sdk_download: "{{ _operator_sdk_download[operator_sdk_version] }}"
-
-# Ansible Operator download details.
-ansible_operator_download: "{{ _ansible_operator_download[operator_sdk_version] }}"
-
-# Operator SDK download details.
-helm_operator_download: "{{ _helm_operator_download[operator_sdk_version] }}"
+_apt:
+  - { state: "latest", name: "bash-completion" }
