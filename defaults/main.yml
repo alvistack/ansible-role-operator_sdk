@@ -15,7 +15,7 @@
 # limitations under the License.
 
 # Operator SDK version.
-operator_sdk_version: "v1.4.0"
+operator_sdk_version: "v1.4.2"
 
 # Operator SDK download details.
 operator_sdk_download: "{{ _operator_sdk_download[operator_sdk_version] }}"
