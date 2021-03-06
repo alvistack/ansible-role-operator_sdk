@@ -14,6 +14,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+_pipx:
+  - { state: "inject", args: "--include-apps", name: "ansible", dependency: "ansible-runner" }
+  - { state: "inject", name: "ansible", dependency: "ansible-runner-http" }
+
 _operator_sdk_download:
   "v1.4.2":
     url: "http://github.com/operator-framework/operator-sdk/releases/download/v1.4.2/operator-sdk_linux_amd64"

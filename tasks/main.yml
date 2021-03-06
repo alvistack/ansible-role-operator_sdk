@@ -60,6 +60,20 @@
     - { dest: "{{ helm_operator_download.dest | dirname }}" }
   register: file_result
 
+- name: pipx install
+  environment:
+    PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+  shell: |
+    set -euo pipefail
+    source /etc/profile.d/pipx.sh
+    pipx {{ item.state }} --force {{ item.args | default('') }} {{ item.name }} {{ item.dependency | default('') }}
+  args:
+    executable: "/bin/bash"
+  loop: "{{ _pipx }}"
+  register: result
+  until: result is succeeded
+  changed_when: result is not succeeded
+
 - name: download archive
   vars:
     ansible_python_interpreter: "python3"

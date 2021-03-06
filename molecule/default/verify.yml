@@ -18,6 +18,13 @@
   remote_user: root
   become: true
   tasks:
+    - name: ansible-runner --version
+      environment:
+        PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+      command: ansible-runner --version
+      register: result
+      changed_when: result is not succeeded
+
     - name: operator-sdk version
       environment:
         PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
