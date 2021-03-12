@@ -13,3 +13,19 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+
+- name: operator_sdk | download archive
+  vars:
+    ansible_python_interpreter: "python3"
+  get_url:
+    url: "{{ item.url }}"
+    dest: "{{ item.dest }}"
+    checksum: "{{ item.checksum }}"
+    mode: "{{ item.mode | default('0644') }}"
+    timeout: 300
+  loop:
+    - "{{ operator_sdk_download }}"
+    - "{{ ansible_operator_download }}"
+    - "{{ helm_operator_download }}"
+  register: result
+  until: result is succeeded
