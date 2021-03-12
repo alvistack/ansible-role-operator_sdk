@@ -58,38 +58,11 @@
     - { dest: "{{ operator_sdk_download.dest | dirname }}" }
     - { dest: "{{ ansible_operator_download.dest | dirname }}" }
     - { dest: "{{ helm_operator_download.dest | dirname }}" }
-  register: file_result
+  notify:
+    - operator_sdk | download archive
 
-- name: pipx install
-  environment:
-    PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-  shell: |
-    set -euo pipefail
-    source /etc/profile.d/pipx.sh
-    pipx {{ item.state }} --force {{ item.args | default('') }} {{ item.name }} {{ item.dependency | default('') }}
-  args:
-    executable: "/bin/bash"
-  loop: "{{ _pipx }}"
-  register: result
-  until: result is succeeded
-  changed_when: result is not succeeded
-
-- name: download archive
-  vars:
-    ansible_python_interpreter: "python3"
-  get_url:
-    url: "{{ item.url }}"
-    dest: "{{ item.dest }}"
-    checksum: "{{ item.checksum }}"
-    mode: "{{ item.mode | default('0644') }}"
-    timeout: 300
-  loop:
-    - "{{ operator_sdk_download }}"
-    - "{{ ansible_operator_download }}"
-    - "{{ helm_operator_download }}"
-  when: file_result is changed
-  register: result
-  until: result is succeeded
+- name: flush handlers
+  meta: flush_handlers
 
 - name: unarchive package
   shell: |
@@ -107,6 +80,20 @@
   args:
     executable: "/bin/bash"
     creates: "{{ operator_sdk_download.dest }}.log"
+
+- name: pipx install
+  environment:
+    PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+  shell: |
+    set -euo pipefail
+    source /etc/profile.d/pipx.sh
+    pipx {{ item.state }} --force {{ item.args | default('') }} {{ item.name }} {{ item.dependency | default('') }}
+  args:
+    executable: "/bin/bash"
+  loop: "{{ _pipx }}"
+  register: result
+  until: result is succeeded
+  changed_when: result is not succeeded
 
 - name: install bash completion
   environment:
