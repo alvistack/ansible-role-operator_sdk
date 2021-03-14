@@ -22,40 +22,40 @@ _operator_sdk_download:
   "v1.5.0":
     url: "http://github.com/operator-framework/operator-sdk/releases/download/v1.5.0/operator-sdk_linux_amd64"
     dest: "/var/cache/ansible/04bb2ea8ed6e1b790c6285c0a3a6f0f49cddacbbedf05a9bf5d181370048af3e/operator-sdk-v1.5.0-x86_64-linux-gnu"
-    checksum: "sha256:04bb2ea8ed6e1b790c6285c0a3a6f0f49cddacbbedf05a9bf5d181370048af3e"
+    sha256sum: "04bb2ea8ed6e1b790c6285c0a3a6f0f49cddacbbedf05a9bf5d181370048af3e"
   "v1.4.2":
     url: "http://github.com/operator-framework/operator-sdk/releases/download/v1.4.2/operator-sdk_linux_amd64"
     dest: "/var/cache/ansible/4196b42d6869e08ba4c8cee1fca0c0878883d9ad9e53ecd3cbabb8d141e9bdfb/operator-sdk-v1.4.2-x86_64-linux-gnu"
-    checksum: "sha256:4196b42d6869e08ba4c8cee1fca0c0878883d9ad9e53ecd3cbabb8d141e9bdfb"
+    sha256sum: "4196b42d6869e08ba4c8cee1fca0c0878883d9ad9e53ecd3cbabb8d141e9bdfb"
   "v1.4.0":
     url: "http://github.com/operator-framework/operator-sdk/releases/download/v1.4.0/operator-sdk_linux_amd64"
     dest: "/var/cache/ansible/a2b225173d6f12075198e71f67d7726e65b2d36fb8b87bcd693cb3fa97076d94/operator-sdk-v1.4.0-x86_64-linux-gnu"
-    checksum: "sha256:a2b225173d6f12075198e71f67d7726e65b2d36fb8b87bcd693cb3fa97076d94"
+    sha256sum: "a2b225173d6f12075198e71f67d7726e65b2d36fb8b87bcd693cb3fa97076d94"
 
 _ansible_operator_download:
   "v1.5.0":
     url: "http://github.com/operator-framework/operator-sdk/releases/download/v1.5.0/ansible-operator_linux_amd64"
     dest: "/var/cache/ansible/f4313cdc9cc50005f32a99042bb7b7bff91b35b2793891c54a0ece1f80af33b0/ansible-operator-v1.5.0-x86_64-linux-gnu"
-    checksum: "sha256:f4313cdc9cc50005f32a99042bb7b7bff91b35b2793891c54a0ece1f80af33b0"
+    sha256sum: "f4313cdc9cc50005f32a99042bb7b7bff91b35b2793891c54a0ece1f80af33b0"
   "v1.4.2":
     url: "http://github.com/operator-framework/operator-sdk/releases/download/v1.4.2/ansible-operator_linux_amd64"
     dest: "/var/cache/ansible/1e0c4bbdd5e58f89b3c4382930898d4aad3c8946a16ab38b3ced2c48c5586200/ansible-operator-v1.4.2-x86_64-linux-gnu"
-    checksum: "sha256:1e0c4bbdd5e58f89b3c4382930898d4aad3c8946a16ab38b3ced2c48c5586200"
+    sha256sum: "1e0c4bbdd5e58f89b3c4382930898d4aad3c8946a16ab38b3ced2c48c5586200"
   "v1.4.0":
     url: "http://github.com/operator-framework/operator-sdk/releases/download/v1.4.0/ansible-operator_linux_amd64"
     dest: "/var/cache/ansible/6f82f686af533bc87a29b7796e475f5f359d12aedf6d8d7b12634714f9d17d52/ansible-operator-v1.4.0-x86_64-linux-gnu"
-    checksum: "sha256:6f82f686af533bc87a29b7796e475f5f359d12aedf6d8d7b12634714f9d17d52"
+    sha256sum: "6f82f686af533bc87a29b7796e475f5f359d12aedf6d8d7b12634714f9d17d52"
 
 _helm_operator_download:
   "v1.5.0":
     url: "http://github.com/operator-framework/operator-sdk/releases/download/v1.5.0/helm-operator_linux_amd64"
     dest: "/var/cache/ansible/b7699d52963f1ebcfd05fda9d7984fc1fec89a8982c5aa6e29e796c06e17ccce/helm-operator-v1.5.0-x86_64-linux-gnu"
-    checksum: "sha256:b7699d52963f1ebcfd05fda9d7984fc1fec89a8982c5aa6e29e796c06e17ccce"
+    sha256sum: "b7699d52963f1ebcfd05fda9d7984fc1fec89a8982c5aa6e29e796c06e17ccce"
   "v1.4.2":
     url: "http://github.com/operator-framework/operator-sdk/releases/download/v1.4.2/helm-operator_linux_amd64"
     dest: "/var/cache/ansible/820dd5046a8f35a9c515ebb5f8ce5d7b01840234e6390d1435a7a890336da596/helm-operator-v1.4.2-x86_64-linux-gnu"
-    checksum: "sha256:820dd5046a8f35a9c515ebb5f8ce5d7b01840234e6390d1435a7a890336da596"
+    sha256sum: "820dd5046a8f35a9c515ebb5f8ce5d7b01840234e6390d1435a7a890336da596"
   "v1.4.0":
     url: "http://github.com/operator-framework/operator-sdk/releases/download/v1.4.0/helm-operator_linux_amd64"
     dest: "/var/cache/ansible/4099c315e535716ce0c90de32964fae857ae378ca43fc1377faef9f6b91a7520/helm-operator-v1.4.0-x86_64-linux-gnu"
-    checksum: "sha256:4099c315e535716ce0c90de32964fae857ae378ca43fc1377faef9f6b91a7520"
+    sha256sum: "4099c315e535716ce0c90de32964fae857ae378ca43fc1377faef9f6b91a7520"
