@@ -15,8 +15,8 @@
 # limitations under the License.
 
 _pipx:
-  - { state: "inject", args: "--force --pip-args='--upgrade' --include-apps", name: "ansible", dependency: "ansible-runner" }
-  - { state: "inject", args: "--force --pip-args='--upgrade'", name: "ansible", dependency: "ansible-runner-http" }
+  - { state: "inject", args: "--include-apps", name: "ansible", dependency: "ansible-runner" }
+  - { state: "inject", name: "ansible", dependency: "ansible-runner-http" }
 
 _operator_sdk_download:
   "v1.5.0":
