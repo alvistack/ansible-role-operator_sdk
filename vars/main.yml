@@ -23,6 +23,10 @@ _operator_sdk_download:
     url: "http://github.com/operator-framework/operator-sdk/releases/download/v1.6.1/operator-sdk_linux_amd64"
     dest: "/var/cache/ansible/005e83e4541155baecbba3514d06eda1f10f03bd0aba4d9051c0f3bbf21895e2/operator-sdk-v1.6.1-x86_64-linux-gnu"
     sha256sum: "005e83e4541155baecbba3514d06eda1f10f03bd0aba4d9051c0f3bbf21895e2"
+  "v1.5.2":
+    url: "http://github.com/operator-framework/operator-sdk/releases/download/v1.5.2/operator-sdk_linux_amd64"
+    dest: "/var/cache/ansible/5f35c359b4f311339518ff5659c94edbe3d1e5ec48101a2087d3803a9b8dfec6/operator-sdk-v1.5.2-x86_64-linux-gnu"
+    sha256sum: "5f35c359b4f311339518ff5659c94edbe3d1e5ec48101a2087d3803a9b8dfec6"
   "v1.5.1":
     url: "http://github.com/operator-framework/operator-sdk/releases/download/v1.5.1/operator-sdk_linux_amd64"
     dest: "/var/cache/ansible/ab5169da95dda28ad77ccd0b46c2b5f22c989da994f713b2a7a5a149a5f2d236/operator-sdk-v1.5.1-x86_64-linux-gnu"
@@ -37,6 +41,10 @@ _ansible_operator_download:
     url: "http://github.com/operator-framework/operator-sdk/releases/download/v1.6.1/ansible-operator_linux_amd64"
     dest: "/var/cache/ansible/ee9f8ee2ba962d3d556b355c1cf5e6e84aeeb7fa7362d8f8e7bc11e81499557e/ansible-operator-v1.6.1-x86_64-linux-gnu"
     sha256sum: "ee9f8ee2ba962d3d556b355c1cf5e6e84aeeb7fa7362d8f8e7bc11e81499557e"
+  "v1.5.2":
+    url: "http://github.com/operator-framework/operator-sdk/releases/download/v1.5.2/ansible-operator_linux_amd64"
+    dest: "/var/cache/ansible/fe83e79e4385ed83213a34885254ca0dfc93ae507f34fdcc46d98ec3de6050ef/ansible-operator-v1.5.2-x86_64-linux-gnu"
+    sha256sum: "fe83e79e4385ed83213a34885254ca0dfc93ae507f34fdcc46d98ec3de6050ef"
   "v1.5.1":
     url: "http://github.com/operator-framework/operator-sdk/releases/download/v1.5.1/ansible-operator_linux_amd64"
     dest: "/var/cache/ansible/968bf0271fd3f9b0a894d4e7fc21a11732ea77bc200c9d244b33a213908d76cb/ansible-operator-v1.5.1-x86_64-linux-gnu"
@@ -51,6 +59,10 @@ _helm_operator_download:
     url: "http://github.com/operator-framework/operator-sdk/releases/download/v1.6.1/helm-operator_linux_amd64"
     dest: "/var/cache/ansible/756af7f708826664d0e00533285fe159dcddc7fd82ab3943e28c29266f43a860/helm-operator-v1.6.1-x86_64-linux-gnu"
     sha256sum: "756af7f708826664d0e00533285fe159dcddc7fd82ab3943e28c29266f43a860"
+  "v1.5.2":
+    url: "http://github.com/operator-framework/operator-sdk/releases/download/v1.5.2/helm-operator_linux_amd64"
+    dest: "/var/cache/ansible/1b88865d8468804074ec3f747f674893c0d779aff1f1610fc29cd7a8d3622600/helm-operator-v1.5.2-x86_64-linux-gnu"
+    sha256sum: "1b88865d8468804074ec3f747f674893c0d779aff1f1610fc29cd7a8d3622600"
   "v1.5.1":
     url: "http://github.com/operator-framework/operator-sdk/releases/download/v1.5.1/helm-operator_linux_amd64"
     dest: "/var/cache/ansible/5aec8bcc9010b7551ad32bf2495d8bb9616ca791257c489c68d1957d50e0133b/helm-operator-v1.5.1-x86_64-linux-gnu"
