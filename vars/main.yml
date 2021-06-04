@@ -18,6 +18,10 @@ _pipx:
   - { state: "inject", args: "--include-apps", name: "ansible", dependency: "ansible-runner" }
   - { state: "inject", name: "ansible", dependency: "ansible-runner-http" }
 
+_operator_sdk_version:
+  "v1.8": "v1.8.0"
+  "v1.7": "v1.7.2"
+
 _operator_sdk_download:
   "v1.8.0":
     url: "http://github.com/operator-framework/operator-sdk/releases/download/v1.8.0/operator-sdk_linux_amd64"
