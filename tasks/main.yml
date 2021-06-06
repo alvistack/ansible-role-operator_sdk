@@ -66,7 +66,7 @@
 
 - name: download archive
   shell: |
-    set -euo pipefail
+    set -euxo pipefail
     TMP_DIR="$(mktemp -d)" \
       && cd $TMP_DIR \
       && mkdir -p .{{ item.dest | dirname }} \
@@ -87,7 +87,7 @@
 
 - name: unarchive package
   shell: |
-    set -euo pipefail
+    set -euxo pipefail
     mkdir -p /var/log/ansible
     exec &> >(tee -a /var/log/ansible/{{ operator_sdk_download.checksum }}.log)
     cd /usr/local/bin
@@ -107,7 +107,7 @@
   environment:
     PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
   shell: |
-    set -euo pipefail
+    set -euxo pipefail
     source /etc/profile.d/pipx.sh
     pipx {{ item.state }} \
         --force --pip-args='--upgrade' {{ item.args | default('') }} \
@@ -123,7 +123,7 @@
   environment:
     PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
   shell: |
-    set -euo pipefail
+    set -euxo pipefail
     operator-sdk completion bash > /etc/bash_completion.d/operator-sdk
   args:
     executable: "/bin/bash"
