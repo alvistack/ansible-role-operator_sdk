@@ -14,17 +14,5 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Operator SDK release.
-operator_sdk_release: "v1.8"
-
-# Operator SDK version.
-operator_sdk_version: "{{ _operator_sdk_version[operator_sdk_release] }}"
-
-# Operator SDK download details.
-operator_sdk_download: "{{ _operator_sdk_download[operator_sdk_version] }}"
-
-# Ansible Operator download details.
-ansible_operator_download: "{{ _ansible_operator_download[operator_sdk_version] }}"
-
-# Operator SDK download details.
-helm_operator_download: "{{ _helm_operator_download[operator_sdk_version] }}"
+_zypper:
+  - { state: "latest", name: "bash-completion" }
