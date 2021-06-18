@@ -19,7 +19,7 @@ _pipx:
   - { state: "inject", name: "ansible", dependency: "ansible-runner-http" }
 
 _operator_sdk_version:
-  "v1.8": "v1.9.0"
+  "v1.9": "v1.9.0"
   "v1.8": "v1.8.0"
 
 _operator_sdk_download:
