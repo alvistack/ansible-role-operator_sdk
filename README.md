@@ -1,9 +1,13 @@
 # Ansible Role for Operator SDK
 
-[![Gitlab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/ansible-role-operator_sdk/master)](https://gitlab.com/alvistack/ansible-role-operator_sdk/-/pipelines)
-[![GitHub release](https://img.shields.io/github/release/alvistack/ansible-role-operator_sdk.svg)](https://github.com/alvistack/ansible-role-operator_sdk/releases)
-[![GitHub license](https://img.shields.io/github/license/alvistack/ansible-role-operator_sdk.svg)](https://github.com/alvistack/ansible-role-operator_sdk/blob/master/LICENSE)
-[![Ansible Role](https://img.shields.io/badge/galaxy-alvistack.operator_sdk-blue.svg)](https://galaxy.ansible.com/alvistack/operator_sdk)
+[![Gitlab pipeline
+status](https://img.shields.io/gitlab/pipeline/alvistack/ansible-role-operator_sdk/master)](https://gitlab.com/alvistack/ansible-role-operator_sdk/-/pipelines)
+[![GitHub
+release](https://img.shields.io/github/release/alvistack/ansible-role-operator_sdk.svg)](https://github.com/alvistack/ansible-role-operator_sdk/releases)
+[![GitHub
+license](https://img.shields.io/github/license/alvistack/ansible-role-operator_sdk.svg)](https://github.com/alvistack/ansible-role-operator_sdk/blob/master/LICENSE)
+[![Ansible
+Role](https://img.shields.io/badge/galaxy-alvistack.operator_sdk-blue.svg)](https://galaxy.ansible.com/alvistack/operator_sdk)
 
 Ansible Role for Operator SDK Installation.
 
@@ -39,7 +43,8 @@ This role could simply deploy to `localhost` as below:
 ## License
 
   - Code released under [Apache License 2.0](LICENSE)
-  - Docs released under [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/)
+  - Docs released under [CC
+    BY 4.0](http://creativecommons.org/licenses/by/4.0/)
 
 ## Author Information
 
