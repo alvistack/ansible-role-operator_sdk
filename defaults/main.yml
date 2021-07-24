@@ -15,7 +15,7 @@
 # limitations under the License.
 
 # Operator SDK release.
-operator_sdk_release: "1.9"
+operator_sdk_release: "1.10"
 
 # Operator SDK version.
 operator_sdk_version: "{{ _operator_sdk_version[operator_sdk_release] }}"
