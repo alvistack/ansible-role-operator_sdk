@@ -24,4 +24,6 @@ _apt_repository:
     state: "present"
 
 _apt:
+  - { state: "latest", name: "ansible-runner" }
+  - { state: "latest", name: "ansible-runner-http" }
   - { state: "latest", name: "operator-sdk" }
