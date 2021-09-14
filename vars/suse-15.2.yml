@@ -31,6 +31,6 @@ _yum_repository:
     state: "present"
 
 _zypper:
-  - { state: "latest", name: "ansible-runner" }
-  - { state: "latest", name: "ansible-runner-http" }
+  - { state: "latest", name: "python3-ansible-runner" }
+  - { state: "latest", name: "python3-ansible-runner-http" }
   - { state: "latest", name: "operator-sdk" }
