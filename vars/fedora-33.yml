@@ -31,4 +31,6 @@ _yum_repository:
     state: "present"
 
 _yum:
+  - { state: "latest", name: "python3-ansible-runner" }
+  - { state: "latest", name: "python3-ansible-runner-http" }
   - { state: "latest", name: "operator-sdk" }
