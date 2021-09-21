@@ -1,5 +1,7 @@
 # Ansible Role for Operator SDK
 
+<img src="/alvistack.svg" width="75" alt="AlviStack">
+
 [![Gitlab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/ansible-role-operator_sdk/master)](https://gitlab.com/alvistack/ansible-role-operator_sdk/-/pipelines)
 [![GitHub release](https://img.shields.io/github/release/alvistack/ansible-role-operator_sdk.svg)](https://github.com/alvistack/ansible-role-operator_sdk/releases)
 [![GitHub license](https://img.shields.io/github/license/alvistack/ansible-role-operator_sdk.svg)](https://github.com/alvistack/ansible-role-operator_sdk/blob/master/LICENSE)
