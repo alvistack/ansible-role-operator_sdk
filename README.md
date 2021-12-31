@@ -3,7 +3,7 @@
 <img src="/alvistack.svg" width="75" alt="AlviStack">
 
 [![Gitlab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/ansible-role-operator_sdk/master)](https://gitlab.com/alvistack/ansible-role-operator_sdk/-/pipelines)
-[![GitHub release](https://img.shields.io/github/release/alvistack/ansible-role-operator_sdk.svg)](https://github.com/alvistack/ansible-role-operator_sdk/releases)
+[![GitHub tag](https://img.shields.io/github/tag/alvistack/ansible-role-operator_sdk.svg)](https://github.com/alvistack/ansible-role-operator_sdk/tags)
 [![GitHub license](https://img.shields.io/github/license/alvistack/ansible-role-operator_sdk.svg)](https://github.com/alvistack/ansible-role-operator_sdk/blob/master/LICENSE)
 [![Ansible Role](https://img.shields.io/badge/galaxy-alvistack.operator_sdk-blue.svg)](https://galaxy.ansible.com/alvistack/operator_sdk)
 
@@ -17,7 +17,7 @@ This role was designed for:
 
   - Ubuntu 18.04, 20.04, 21.04, 21.10
   - CentOS 7, 8 Stream
-  - openSUSE Leap 15.2, Leap 15.3, Tumbleweed
+  - openSUSE Leap 15.3, Tumbleweed
   - Debian 10, 11
   - Fedora 34, 35
   - RHEL 7, 8
