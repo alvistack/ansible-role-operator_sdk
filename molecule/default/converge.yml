@@ -19,16 +19,16 @@
   become: true
   tasks:
     - name: include role
-      include_role:
+      ansible.builtin.include_role:
         name: python
       tags: python
     
     - name: include role
-      include_role:
+      ansible.builtin.include_role:
         name: ansible
       tags: ansible
     
     - name: include role
-      include_role:
+      ansible.builtin.include_role:
         name: operator_sdk
       tags: operator_sdk
