@@ -20,15 +20,15 @@
   tasks:
     - name: include role
       ansible.builtin.include_role:
-        name: python
-      tags: python
+        name: alvistack.python
+      tags: alvistack.python
     
     - name: include role
       ansible.builtin.include_role:
-        name: ansible
-      tags: ansible
+        name: alvistack.ansible
+      tags: alvistack.ansible
     
     - name: include role
       ansible.builtin.include_role:
-        name: operator_sdk
-      tags: operator_sdk
+        name: alvistack.operator_sdk
+      tags: alvistack.operator_sdk
