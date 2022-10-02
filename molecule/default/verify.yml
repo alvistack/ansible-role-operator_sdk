@@ -20,21 +20,25 @@
   become: true
   tasks:
     - name: ansible-runner --version
-      ansible.builtin.command: ansible-runner --version
+      ansible.builtin.command:
+        cmd: ansible-runner --version
       register: result
       changed_when: result is not succeeded
 
     - name: operator-sdk version
-      ansible.builtin.command: operator-sdk version
+      ansible.builtin.command:
+        cmd: operator-sdk version
       register: result
       changed_when: result is not succeeded
 
     - name: ansible-operator version
-      ansible.builtin.command: ansible-operator version
+      ansible.builtin.command:
+        cmd: ansible-operator version
       register: result
       changed_when: result is not succeeded
 
     - name: helm-operator version
-      ansible.builtin.command: helm-operator version
+      ansible.builtin.command:
+        cmd: helm-operator version
       register: result
       changed_when: result is not succeeded
