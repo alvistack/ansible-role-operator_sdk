@@ -31,7 +31,7 @@ _yum_repository:
     gpgkey: http://downloadcontent.opensuse.org/repositories/home:/alvistack/CentOS_9_Stream/repodata/repomd.xml.key
     state: present
 
-_yum:
+_dnf:
   - { state: latest, name: python3-ansible-runner }
   - { state: latest, name: python3-ansible-runner-http }
   - { state: latest, name: operator-sdk }
